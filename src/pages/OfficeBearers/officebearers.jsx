@@ -1,5 +1,5 @@
 import React from "react";
-import "./officeBearers.css";
+import "./officebearers.css";
 
 const officeBearersData = [
   {
