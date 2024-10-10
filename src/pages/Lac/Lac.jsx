@@ -1,6 +1,4 @@
 import React from 'react';
-import cc1 from '../../assets/cc1.jpg';
-import cc2 from '../../assets/cc2.jpg';
 import c1 from '../../assets/c1.jpg';
 import c2 from '../../assets/c2.jpg';
 import c3 from '../../assets/c3.jpg';
