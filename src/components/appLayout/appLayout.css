@@ -1,0 +1,11 @@
+.layout{
+    display: flex;
+    flex-direction: column;
+}
+
+.app-body {
+    /* overflow: hidden; */
+    padding: 12px;
+    padding-bottom: 20px;
+    background-color: var(--background-1);
+}
