@@ -1,0 +1,75 @@
+.lac-container {
+    padding: 20px;
+}
+
+.image-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.circle {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: border-radius 0.3s ease;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.member-info strong {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.member-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    border-radius: 10px; /* This will still create a rounded effect */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .image-group {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-group {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on mobile */
+    }
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+}

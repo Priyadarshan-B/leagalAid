@@ -7,10 +7,10 @@ function AppLayout(props) {
   return (
     <div className="layout">
       <Header />
-      <div className={"app-body"} style={{ width: '100%', height: '100vh' }}>
+      <div className={"app-body"} style={{ }}>
         {props.body}  
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }
