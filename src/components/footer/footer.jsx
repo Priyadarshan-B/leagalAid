@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import "./footer.css";
-import Swal from "sweetalert2"; // Import SweetAlert2
+import Swal from "sweetalert2";
 import {
   FaFacebook,
   FaTwitter,
   FaWhatsapp,
   FaEnvelope,
   FaYoutube,
+  FaLinkedin, 
+  FaInstagram, 
 } from "react-icons/fa";
 
 const Footer = () => {
-  const [email, setEmail] = useState(""); // State to handle the email input
+  const [email, setEmail] = useState(""); 
 
-  // Function to handle newsletter subscription
   const handleSubscribe = () => {
     if (email) {
       Swal.fire({
@@ -20,7 +21,7 @@ const Footer = () => {
         title: "Subscribed!",
         text: `Thank you for subscribing, ${email}!`,
       });
-      setEmail(""); // Reset email input after subscribing
+      setEmail("");
     } else {
       Swal.fire({
         icon: "error",
@@ -33,6 +34,21 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
+      <div className="footer-section newsletter-section">
+          <h3>Newsletter</h3>
+          <div className="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="newsletter-input"
+            />
+            <button onClick={handleSubscribe} className="subscribe-button">
+              Subscribe
+            </button>
+          </div>
+        </div>
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>1st floor, Amenities block,</p>
@@ -40,14 +56,13 @@ const Footer = () => {
           <p>The Tamil Nadu Dr. Ambedkar Law University,</p>
           <p>M.G.R. Salai, Perungudi, Chennai - 600 113</p>
           <br />
-          <p>Email: bpriyan18082004@gmail.com</p>
-          <p>Phone: +91 12345 67890</p>
+          <p>Email: legalaidclinic.soel@gmail.com </p>
         </div>
 
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-media-icons">
-            <a
+            {/* <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -60,25 +75,48 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <FaTwitter />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="https://wa.me/9789769208"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaWhatsapp />
-            </a>
-            <a href="mailto:bpriyan18082004@gmail.com">
+            </a> */}
+            <a href="mailto:legalaidclinic.soel@gmail.com ">
               <FaEnvelope />
             </a>
             <a
+              href="https://www.linkedin.com/in/legal-aid-clinic-tndalu-7b6463295/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://www.instagram.com/tndalu_lac/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            {/* <a
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaYoutube />
-            </a>
+            </a> */}
           </div>
+        </div>
+        <div className="footer-section">
+          <h3>Faculty Coordinators</h3>
+          <p> Dr. P. Brinda - +91 9003066025</p>
+          <p>Dr. M. Sunil Gladson - +91 9444564019</p>
+          <br />
+          <h3> For any suggestions</h3>
+          <p>S.V. Dhiraj - +918838602226
+          (Student Coordinator)</p>
         </div>
 
         <div className="footer-section">
@@ -99,21 +137,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-section newsletter-section">
-          <h3>Newsletter</h3>
-          <div className="newsletter-form">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="newsletter-input"
-            />
-            <button onClick={handleSubscribe} className="subscribe-button">
-              Subscribe
-            </button>
-          </div>
-        </div>
+        
       </div>
     </footer>
   );

@@ -20,7 +20,7 @@ const Header = () => {
     <header className="header">
       <div className='header-flex'>
         <img className='logo' style={{ flex: '0', marginLeft: '10px' }} src={logo} alt="Logo"  />
-        <h1 className="header-title">Moot Court Association, SOEL</h1>
+        <h1 className="header-title">Legal Aid Clinic, SOEL</h1>
         <div className="hamburger-icon" onClick={toggleMenu}>
           {isMenuOpen ? <CloseIcon style={{ color: 'white' }} /> : <MenuIcon style={{ color: 'white' }} />}
         </div>
